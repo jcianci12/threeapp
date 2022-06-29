@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "firefox",
+            "request": "launch",
+            "preLaunchTask": "npm: start",
+            "reAttach": true,
+            "name": "Launch localhost",
+            "url": "http://localhost:4200/",
+            "webRoot": "${workspaceFolder}/Aspnetcoreapp/ClientApp",
+            // "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe",
+            "pathMappings": [
+                {
+                    "url": "webpack:///src",
+                    "path": "${workspaceFolder}/Aspnetcoreapp/ClientApp/src"
+                }
+            ]
+        },
+    ],
+    "compounds": [
+        {
+            "name": "HOME_compund",
+            "configurations": [
+                "Launch localhost"
+            ]
+        }
+    ]
+}
